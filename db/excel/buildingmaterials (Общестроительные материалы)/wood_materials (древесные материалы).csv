@@ -1,0 +1,60 @@
+﻿id;category_group;category;name;description;unit;volume;quantity;price;currency;availability;picture
+1;wood_materials;hardboard;            ДВП 2,5 (2,44*1,22);bla bla bla;1;1;шт.;52,90;грн;true;img\buildingmaterials\wood_materials\ДВП 25.jpeg
+2;wood_materials;hardboard;            ДВП 2,5 (2,44*2,13);bla bla bla;1;1;шт.;37,50;грн;true;img\buildingmaterials\wood_materials\ДВП 25.jpeg
+3;wood_materials;hardboard;            ДВП 2,5 (2,46*1,24);bla bla bla;1;1;шт.;24,41;грн;true;img\buildingmaterials\wood_materials\ДВП 25.jpeg
+4;wood_materials;hardboard;            ДВП 3,2 (2,44*1,22);bla bla bla;1;1;шт.;69,90;грн;true;img\buildingmaterials\wood_materials\ДВП 25.jpeg
+5;wood_materials; Particleboard;            ДСП 16мм 1,22*1,83;bla bla bla;1;1;шт.;52,30;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+6;wood_materials  ;Particleboard;             ДСП 16мм 2,44*1,83; bla bla bla;1;1;шт.;283,40;грн;true; img\buildingmaterials\wood_materials\Particleboard.jpg
+7;wood_materials; Particleboard;            ДСП 16мм 2,44*1,83 (будів.);bla bla bla;1;1;шт.;112,30;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+8;wood_materials; Particleboard;            ДСП 16мм 2,60*1,83;bla bla bla;1;1;шт.;77,00;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+9;wood_materials; Particleboard;            ДСП 16мм 2,75*1,83;bla bla bla;1;1;шт.;313,90;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+10;wood_materials; Particleboard;            ДСП 18мм 1,22*1,83;bla bla bla;1;1;шт.;50,6;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+11;wood_materials; Particleboard;            ДСП 18мм 2,75*1,83;bla bla bla;1;1;шт.;162,40;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+12;wood_materials; Particleboard;            ДСП 22мм 2,44*1,83 ПА МШЕ 1;bla bla bla;1;1;шт.;269,90;грн;true;img\buildingmaterials\wood_materials\Particleboard.jpg
+13;wood_materials;Rail;            Рейка 20х40 ;bla bla bla;1;1;м.п.;4,37;грн;true;img\buildingmaterials\wood_materials\rail.jpg
+14;wood_materials;Rail;            Рейка 20х40 СВ (3м);bla bla bla;1;1;м.п.;1,64;грн;true;img\buildingmaterials\wood_materials\rail.jpg
+15;wood_materials;Rail;            Рейка 25х30х4,5 ;bla bla bla;1;1;м.п.;1,09;грн;true;img\buildingmaterials\wood_materials\rail.jpg
+16;wood_materials;Rail;            Рейка 50х40 СВ (3м);bla bla bla;1;1;м.п.;2,55;грн;true;img\buildingmaterials\wood_materials\rail.jpg
+17;wood_materials;Plywood;            Фанера  4мм 1,250*1,525м.;bla bla bla;1;1;шт.;40,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+18;wood_materials;Plywood;            Фанера  4мм 1,475*1,525м.;bla bla bla;1;1;шт.;40,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+19;wood_materials;Plywood;            Фанера  4мм 1,525*1,525м.;bla bla bla;1;1;шт.;97,90;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+20;wood_materials;Plywood;            Фанера  6,5мм 1,525*1,525м.;bla bla bla;1;1;шт.;67,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+21;wood_materials;Plywood;            Фанера  6мм 1,525*1,475м.;bla bla bla;1;1;шт.;68,95;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+22;wood_materials;Plywood;            Фанера  6мм 1,525*1,525м.;bla bla bla;1;1;шт.;109,70;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+23;wood_materials;Plywood;            Фанера  8мм 1,525*1,525м.;bla bla bla;1;1;шт.;147,90;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+24;wood_materials;Plywood;            Фанера 1,250*2,500м. 12мм FW;bla bla bla;1;1;шт.;1 057,99;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+25;wood_materials;Plywood;            Фанера 10мм 1,250*1,525м.;bla bla bla;1;1;шт.;87,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+26;wood_materials;Plywood;            Фанера 10мм 1,475*1,525м.;bla bla bla;1;1;шт.;87,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+27;wood_materials;Plywood;            Фанера 10мм 1,525*1,225м.;bla bla bla;1;1;шт.;86,20;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+28;wood_materials;Plywood;            Фанера 10мм 1,525*1,500м.;bla bla bla;1;1;шт.;74,55;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+29;wood_materials;Plywood;            Фанера 10мм 1,525*1,525м.;bla bla bla;1;1;шт.;166,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+30;wood_materials;Plywood;            Фанера 12мм 1,525*1,525м.;bla bla bla;1;1;шт.;195,60;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+31;wood_materials;Plywood;            Фанера 15мм 1,525*1,525м.;bla bla bla;1;1;шт.;295,90;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+32;wood_materials;Plywood;            Фанера 16мм (1,525х1,525);bla bla bla;1;1;шт.;132,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+33;wood_materials;Plywood;            Фанера 18мм 1,525*1,525м.;bla bla bla;1;1;шт.;384,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+34;wood_materials;Plywood;            Фанера 20мм 1,525*1,525м.;bla bla bla;1;1;шт.;96,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+35;wood_materials;Plywood;            Фанера 21мм 1,250*2,500м. F/F Китай;bla bla bla;1;1;шт.;804,54;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+36;wood_materials;Plywood;            Фанера 22мм 1,525*1,525м.;bla bla bla;1;1;шт.;166,75;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+37;wood_materials;Plywood;            Фанера 6мм 1,250*1,525м.;bla bla bla;1;1;шт.;58,00;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+38;wood_materials;Plywood;            Фанера 7мм 1,525*1,525м.;bla bla bla;1;1;шт.;59,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+39;wood_materials;Plywood;            Фанера 8мм 1,250*1,525м.;bla bla bla;1;1;шт.;72,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+40;wood_materials;Plywood;            Фанера 8мм 1,475*1,525м.;bla bla bla;1;1;шт.;72,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+41;wood_materials;Plywood;            Фанера ламин. 15мм 1,250*2,500м. ;bla bla bla;1;1;шт.;1 207,50;грн;true;img\buildingmaterials\wood_materials\Фанера 4мм.jpeg
+43;wood_materials;Plywood water-resistant OSB;            OSB 06*1 220*2 440 (Канада);bla bla bla;1;1;шт.;81,65;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+44;wood_materials;Plywood water-resistant OSB;            OSB 9,5*1 220*2 440 (Канада);bla bla bla;1;1;шт.;106,00;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+45;wood_materials;Plywood water-resistant OSB;            OSB SE 08мм (1,22*2,44);bla bla bla;1;1;шт.;94,00;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+46;wood_materials;Plywood water-resistant OSB;            OSB SE 10мм (1,22*2,44);bla bla bla;1;1;шт.;121,90;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+47;wood_materials;Plywood water-resistant OSB;            OSB SE 12мм (1,22х2,44);bla bla bla;1;1;шт.;181,40;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+48;wood_materials;Plywood water-resistant OSB;            OSB SE 15мм (1,22*2,44);bla bla bla;1;1;шт.;179,00;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+49;wood_materials;Plywood water-resistant OSB;            OSB SE 18мм  (1,22х2,44);bla bla bla;1;1;шт.;212,50;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+50;wood_materials;Plywood water-resistant OSB;            OSB-3 06мм (2,5*1,25);bla bla bla;1;1;шт.;175,20;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+51;wood_materials;Plywood water-resistant OSB;            OSB-3 08мм (2,5*1,25);bla bla bla;1;1;шт.;179,90;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+52;wood_materials;Plywood water-resistant OSB;            OSB-3 10мм (2,5*1,25);bla bla bla;1;1;шт.;174,20;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+53;wood_materials;Plywood water-resistant OSB;            OSB-3 12мм (2.5х1,25);bla bla bla;1;1;шт.;216,95;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+54;wood_materials;Plywood water-resistant OSB;            OSB-3 15мм (2,5*1,25);bla bla bla;1;1;шт.;270,80;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+55;wood_materials;Plywood water-resistant OSB;            OSB-3 18мм (2.5х1,25);bla bla bla;1;1;шт.;325,30;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+56;wood_materials;Plywood water-resistant OSB;            OSB-3 22мм (2,5*1,25);bla bla bla;1;1;шт.;394,00;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+57;wood_materials;Plywood water-resistant OSB;            QSB 06мм (2,07*1,35) Кроношпан Румыния;bla bla bla;1;1;шт.;117,30;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+58;wood_materials;Plywood water-resistant OSB;            QSB 08мм (2,07*1,35) Кроношпан Румыния;bla bla bla;1;1;шт.;126,50;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+59;wood_materials;Plywood water-resistant OSB;            QSB 08мм(2.5*1.25);bla bla bla;1;1;шт.;101,20;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
+60;wood_materials;Plywood water-resistant OSB;            QSB 10мм (2,5*1,25);bla bla bla;1;1;шт.;278,90;грн;true;img\buildingmaterials\wood_materials\Плита OSB.jpeg
