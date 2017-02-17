@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<title>Главная страница</title>
 	<meta name="discription" content="" />
-	<link rel="stylesheet" content="text/css" href="css/style.css" />
+	<link rel="stylesheet" content="text/css" href="css/styles.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>  $(function() {
 			$(«li»).click(function(e) {

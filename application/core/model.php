@@ -119,6 +119,7 @@ class Model
 			//вытягиваем имя таблицы
 			$DBName = substr($_FILES['userfile']['name'],0,-4);
 
+
 			// проверяем таблицу на косяки
 			if (is_array($csv_lines)) {
 				$cnt = count($csv_lines);       // количество линий массива
@@ -244,7 +245,7 @@ class Model
 
 	}
 
-	public static function full_list ($array1, $array2, $dir, $num)
+	public static function full_list ($array1, $array2, $dir, $num) // num - количество категорий
 	{
 		for ($i =0;$i < $num; $i++)
 		{
@@ -252,7 +253,7 @@ class Model
 			?><div class="list_category"><ul><?php
 				foreach ($array2[$i] as $key => $value)
 				{
-					echo '<li><a href="/.$key.">'.$value.'</a></li>';
+					echo '<li><a href="/'.$key.'">'.$value.'</a></li>';
 				}
 				?></ul></div><?php
 		}
@@ -263,5 +264,99 @@ class Model
 	public function get_data()
 	{
 		// todo
+	}
+
+	public static function displayGoods ($pageName, $DBName)
+	{
+
+
+		//$query = "SELECT * FROM ".$DBName." WHERE page = '".$pageName."'";LIMIT '.$shift.', '.$count.'
+		if (!empty($_GET["page"]))
+		{
+			$shift = $_GET["page"];// начиная с позиции shift+1
+		} else {
+			$shift = 1;
+		}// начиная с позиции shift+1
+		$count = 20; // количество выводимых товаров+
+
+		$query = "SELECT * FROM ".$DBName." WHERE page = '".$pageName."' LIMIT ".($shift-1)*$count.", ".$count;// Делаем выборку $count записей, начиная с $shift + 1.
+		$rs = Model::fatchArray($query);
+		/*Model::goodLook($rs);*/
+		$dataDB = $rs;
+		echo "<div class='dispGoods'>";
+		foreach ($dataDB as $value)
+		{
+			?>
+			<div class="dataDB">
+				<img src="<?php print_r($value['picture'])?>">
+				<p align="center">
+					<?php
+					print_r($value['name']);
+					?>
+				</p>
+				<br>
+				<p>
+					Код товара: <?php print_r($value['id']); ?>
+				</p>
+				<p>
+					<?php print_r($value['price']); ?> <?php print_r($value['currency']); ?>
+				</p>
+				<br>
+				<form>
+					<input type="button" name="backet" value="Заказать">
+				</form>
+			</div>
+			<?php
+		}
+		echo '</div>';
+		?>
+			<div align="center"  class="pageNavigation">   <!--навигация по страницам-->
+				<p>
+					<form action="<?php echo $_SERVER['REQUEST_URI'];?>" method="get">
+						<select size="1" name="count">
+							<option value="20">20</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+					</form>
+					Страница:
+					<?php
+						Model::goodLook($_GET);
+						$page = explode('?',$_SERVER['REQUEST_URI']);
+						if (!empty($_GET['page']))
+						{
+							$pageNum = $_GET['page'];
+						} else {
+							$pageNum = 1;
+						}
+
+						$query = "SELECT COUNT(*) FROM ".$DBName." WHERE page = '".$pageName."'";
+						$rs = Model::fatchArray($query);
+						$timeVar = $rs [0]['COUNT(*)'];
+						$timeVar = ceil($timeVar/20); // общее количество страниц
+						for ($i = 1; $i<=$timeVar; $i++)
+						{
+							if ($i == $timeVar) {
+								$nummberOfPage = '<a href= .'. $page[0].'?page='. ($i) .' class="pageNavigation">'. ($i) .'</a>';
+							} else {
+								$nummberOfPage = '<a  href= .'. $page[0].'?page='. ($i) .' class="pageNavigation">'. ($i) .'</a> | ';
+							}
+
+							if ($pageNum == $i)
+							{
+								echo '<b>'.$nummberOfPage.'</b>';
+							} else {
+								echo $nummberOfPage;
+							}
+
+
+
+						}
+						$_GET['page'] = '';
+					?>
+				</p>
+			</div>
+		<?php
+
 	}
 }
