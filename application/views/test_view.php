@@ -4,13 +4,6 @@
     <input type="submit" value="Send File">
 </form>
 
-<form action="/test" method="get" >
-    <input type="text" name='param_1'>
-    <input type="text" name='param_2'>
-    <input type="text" name='param_3'>
-
-    <input type="submit" value="Проверочка1">
-</form>
 <?php
 
 Model::addToDB_CSV_Table();
@@ -22,26 +15,26 @@ $rs = Model::fatchArray($query);*/
 /*$dataDB = $rs;*/
 /*foreach ($dataDB as $value)
 {
-    */?><!--
+    ?>
         <div class="dataDB">
-            <img src="<?php /*print_r($value['picture'])*/?>">
+            <img src=" <?php print_r($value['picture'])?>">
             <p align="center">
                 <?php
-/*                    print_r($value['name']);
-                */?>
+                    print_r($value['name']);
+                ?>
             </p>
             <br>
             <p>
-                Код товара: <?php /*print_r($value['id']); */?>
+                Код товара: <?php print_r($value['id']); ?>
             </p>
             <p>
-                <?php /*print_r($value['price']); */?> <?php /*print_r($value['currency']); */?>
+                <?php print_r($value['price']); ?> <?php print_r($value['currency']);?>
             </p>
             <br>
             <form>
                 <input type="button" name="backet" value="Заказать">
             </form>
         </div>
-    --><?php
-/*}*/
+    <?php
+}*/
 

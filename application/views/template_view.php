@@ -32,14 +32,14 @@
 		<div class="top-icon-menu">
 			<ul>
 				<li>
-					<a href="/" alt="oops" ><img src="img/user-icon.jpg" ></a>
+					<a href="/bucket" alt="oops" ><img src="img/user-icon.jpg" ></a>
 
 				</li>
 				<li>
-					<a href="/" alt="oops"><img src="img/menu-icon.jpg"></a>
+					<a href="/todo" alt="oops"><img src="img/menu-icon.jpg"></a>
 				</li>
 				<li>
-					<a href="/" alt="oops"><img src="img/goods-icon.jpg"></a>
+					<a href="/todo" alt="oops"><img src="img/goods-icon.jpg"></a>
 				</li>
 				<li>
 					<p>Phone: + 38 (888) 888-88-88</p>
@@ -53,7 +53,7 @@
 <nav >
 	<a href="/buildingmaterials">Общестроительные материалы</a>
 	<a href="/decorationmaterials">Отделочные материалы</a>
-	<a href="/">Инструменты</a>
+	<a href="/123">Инструменты</a>
 	<a href="/floors">Полы</a>
 </nav>
 </div>

@@ -8,6 +8,8 @@ class Model
 	public static $sqlDatabasePassword = '';
 	public static $pdo;
 
+
+
 	public function pdoConnect() {
 		try {
 			$dsn = 'mysql:host='.self::$sqlDatabaseHost.';dbname='.self::$sqlDatabaseName.';charset=utf8';
@@ -15,6 +17,7 @@ class Model
 			self::$pdo = new PDO($dsn, self::$sqlDatabaseUser, self::$sqlDatabasePassword, $opt);
 			self::$pdo->exec("SET NAMES 'utf8'");
 			self::$pdo->exec("SET CHARACTER SET utf8");
+			session_start();
 		} catch (PDOException $e) {
 			echo 'db error';
 			exit;
@@ -266,9 +269,10 @@ class Model
 		// todo
 	}
 
-	public static function displayGoods ($pageName, $DBName)
+	public static function displayGoods ($pageName, $DBName, $params)
 	{
-
+		Model::goodLook($_SESSION['Quantity']);
+		if (!isset($_SESSION['Quantity'])) $_SESSION['Quantity'] = 20;
 
 		//$query = "SELECT * FROM ".$DBName." WHERE page = '".$pageName."'";LIMIT '.$shift.', '.$count.'
 		if (!empty($_GET["page"]))
@@ -277,9 +281,16 @@ class Model
 		} else {
 			$shift = 1;
 		}// начиная с позиции shift+1
-		$count = 20; // количество выводимых товаров+
+		$count = $_SESSION['Quantity']; // количество выводимых товаров+
 
-		$query = "SELECT * FROM ".$DBName." WHERE page = '".$pageName."' LIMIT ".($shift-1)*$count.", ".$count;// Делаем выборку $count записей, начиная с $shift + 1.
+		/******         выбераем фидьтр страницы ******/
+		if ($params['pageFilter'] == 'none')
+		{
+			$pageFilter = '';
+		} else {
+			$pageFilter = "`category_group` = '".$params['pageFilter']."' AND ";
+		}
+		$query = "SELECT * FROM ".$DBName." WHERE ".$pageFilter."page = '".$pageName."' LIMIT ".($shift-1)*$count.", ".$count;// Делаем выборку $count записей, начиная с $shift + 1.
 		$rs = Model::fatchArray($query);
 		/*Model::goodLook($rs);*/
 		$dataDB = $rs;
@@ -313,16 +324,33 @@ class Model
 			<div align="center"  class="pageNavigation">   <!--навигация по страницам-->
 				<p>
 					<form action="<?php echo $_SERVER['REQUEST_URI'];?>" method="get">
-						<select size="1" name="count">
-							<option value="20">20</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
+						<select onchange="location=value" size="1" name="count">
+							<?php
+								if (!isset($_SESSION['Quantity'])) {
+									?><option value="<?php echo $_SERVER['REQUEST_URI'];?>">20</option><?php
+								} else {
+									?><option value="<?php echo $_SERVER['REQUEST_URI'];?>"><?php echo $_SESSION['Quantity']; ?></option><?php
+								}
+							?>
+							<option value="
+							<?php
+									echo $_SERVER['REQUEST_URI'];
+							?>&Quantity=20">20</option>
+							<option value="
+							<?php
+							echo $_SERVER['REQUEST_URI'];
+
+							?>&Quantity=50">50</option><option value="
+							<?php
+							echo $_SERVER['REQUEST_URI'];
+
+							?>&Quantity=100">100</option>
 						</select>
 					</form>
 					Страница:
 					<?php
-						Model::goodLook($_GET);
-						$page = explode('?',$_SERVER['REQUEST_URI']);
+
+						$page = explode('&',$_SERVER['REQUEST_URI']);
 						if (!empty($_GET['page']))
 						{
 							$pageNum = $_GET['page'];
@@ -330,16 +358,16 @@ class Model
 							$pageNum = 1;
 						}
 
-						$query = "SELECT COUNT(*) FROM ".$DBName." WHERE page = '".$pageName."'";
+						$query = "SELECT COUNT(*) FROM ".$DBName." WHERE ".$pageFilter."page = '".$pageName."'";  //считае количество записей для подсчета страниц
 						$rs = Model::fatchArray($query);
 						$timeVar = $rs [0]['COUNT(*)'];
-						$timeVar = ceil($timeVar/20); // общее количество страниц
+						$timeVar = ceil($timeVar/$_SESSION['Quantity']); // общее количество страниц
 						for ($i = 1; $i<=$timeVar; $i++)
 						{
 							if ($i == $timeVar) {
-								$nummberOfPage = '<a href= .'. $page[0].'?page='. ($i) .' class="pageNavigation">'. ($i) .'</a>';
+								$nummberOfPage = '<a href= .'. $page[0].'&page='. ($i) .' class="pageNavigation">'. ($i) .'</a>';
 							} else {
-								$nummberOfPage = '<a  href= .'. $page[0].'?page='. ($i) .' class="pageNavigation">'. ($i) .'</a> | ';
+								$nummberOfPage = '<a  href= .'. $page[0].'&page='. ($i) .' class="pageNavigation">'. ($i) .'</a> | ';
 							}
 
 							if ($pageNum == $i)
@@ -358,5 +386,31 @@ class Model
 			</div>
 		<?php
 
+	}
+
+	public static function pageParam () {
+
+		$pageParam = explode('/', $_SERVER['REQUEST_URI']);
+
+		$pageParam = array_pop($pageParam);
+		$pageParam = explode('?', $pageParam);
+
+		$pageParam = explode('&', $pageParam[1]);
+
+		for ($i = 0; $i<=(count($pageParam)-1); $i++)
+		{
+			$Quantity = substr(strstr ($pageParam[$i], 'Quantity='),9);
+			if ($Quantity>'') {
+				$_SESSION['Quantity'] = $Quantity;
+
+				$reconect = str_replace('&'.$pageParam[$i], "", $_SERVER['REQUEST_URI']);
+				header('Location: '.$reconect);
+			}
+
+		}
+		echo 'echo $Quantity:'.$Quantity.'<br>';
+		echo "echo $_SESSION[Quantity]:".$_SESSION['Quantity']."<br>!!!";
+		$pageFilter = $pageParam[0];
+		return array('pageFilter'=>$pageFilter);
 	}
 }

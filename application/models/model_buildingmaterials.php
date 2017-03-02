@@ -12,7 +12,8 @@ class Model_Buildingmaterials extends Model
             array('roofing_materials','Insulation materials','supuch','derevo','metal','sayding','krepezh','beton','kladoch' ,'vodosliv'),
             // имена картинок для категорий
             array(
-                array('roofing_materials'=>'Кровля','slate'=>'Шифер','ondulin'=>'Ондулин','ruberoid'=>'Рубероид','tile'=>'Черепица',
+                array('roofing_materials?none'=>'Кровля','roofing_materials?'=>'Шифер','roofing_materials?Onduline'=>'Ондулин',
+                    'roofing_materials?Ruberoid'=>'Рубероид','tile'=>'Черепица',
                     'sealing_tapes'=>'Ленты герметизирующие','roof_accessories'=>'Комплектующие','mastics'=>'Мастики'),
                 array('insulation_materials'=>'Изоляционные материалы','styrofoam'=>'Пенопласт',
                     'heat_insulation'=>'Теплоизоляция','film'=>'Пленки','extruded_polystyrene'=>'Экструдированный пенопласт'),
