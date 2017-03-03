@@ -1,3 +1,3 @@
 <?php
-
-Model::displayGoods('Ceilings','decorationmaterials');
+$params = Model::pageParam();
+Model::displayGoods('Ceilings','decorationmaterials',$params);

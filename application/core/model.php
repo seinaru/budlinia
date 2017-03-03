@@ -414,6 +414,7 @@ class Model
 		}
 
 		$pageFilter = $pageParam[0];
+
 		return array('pageFilter'=>$pageFilter);
 	}
 }

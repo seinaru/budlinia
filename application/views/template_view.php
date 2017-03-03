@@ -55,8 +55,8 @@
 <nav >
 	<a href="/buildingmaterials">Общестроительные материалы</a>
 	<a href="/decorationmaterials">Отделочные материалы</a>
-	<a href="/123">Инструменты</a>
-	<a href="/floors">Полы</a>
+	<a href="/todo">Инструменты</a>
+	<a href="/todo">Полы</a>
 </nav>
 </div>
 <div class="phpContent">
@@ -83,7 +83,7 @@
 		<div class="my-profile">
 			<ul>
 				<li><a href="/">МОЯ УЧЕТНАЯ ЗАПИСЬ</a></li>
-				<li><a href="/">Мои заказы</a></li>
+				<li><a href="/bucket">Мои заказы</a></li>
 				<li><a href="/">Моя личная информация</a></li>
 			</ul>
 		</div>

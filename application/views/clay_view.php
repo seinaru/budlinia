@@ -1,3 +1,3 @@
 <?php
-
-Model::displayGoods('Clay','decorationmaterials');
+$params = Model::pageParam();
+Model::displayGoods('Clay','decorationmaterials',$params);

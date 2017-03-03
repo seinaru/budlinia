@@ -1,3 +1,4 @@
 <?php
+$params = Model::pageParam();
 
-Model::displayGoods('Insulation materials','buildingmaterials');
+Model::displayGoods('Insulation materials','buildingmaterials',$params);

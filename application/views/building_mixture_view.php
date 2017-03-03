@@ -1,3 +1,4 @@
 <?php
 
-Model::displayGoods('Building mixture','decorationmaterials');
+$params = Model::pageParam();
+Model::displayGoods('Building mixture','decorationmaterials',$params);
