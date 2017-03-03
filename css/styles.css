@@ -1,3 +1,19 @@
+table {
+    /*width: 100%; /* Ширина таблицы */
+
+
+    border-spacing: 0px; /* Расстояние между ячейками */
+
+
+}
+td, th {
+    //background: maroon; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+    border: 1px solid black;
+    //border-color: black;
+
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -160,7 +176,7 @@ nav a:hover {
     font-size: 20px;
     padding: 10px 5px 20px 0px;
 }
-.dataDB input
+.dataDB input:nth-last-child(2n)
 {
     display: block;
     position: absolute;
@@ -270,5 +286,8 @@ footer li{
 .active {
     color: red;
 }
-
+.bucket {
+    color: #3bff38;
+    border: solid;
+}
 

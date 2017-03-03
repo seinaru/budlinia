@@ -17,7 +17,9 @@
 		});
 	</script>
 
+	<style>
 
+	</style>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
 
 				</li>
 				<li>
-					<a href="/todo" alt="oops"><img src="img/menu-icon.jpg"></a>
+					<a href="/test" alt="oops"><img src="img/menu-icon.jpg"></a>
 				</li>
 				<li>
 					<a href="/todo" alt="oops"><img src="img/goods-icon.jpg"></a>

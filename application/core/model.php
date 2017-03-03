@@ -17,7 +17,7 @@ class Model
 			self::$pdo = new PDO($dsn, self::$sqlDatabaseUser, self::$sqlDatabasePassword, $opt);
 			self::$pdo->exec("SET NAMES 'utf8'");
 			self::$pdo->exec("SET CHARACTER SET utf8");
-			session_start();
+
 		} catch (PDOException $e) {
 			echo 'db error';
 			exit;
@@ -271,7 +271,7 @@ class Model
 
 	public static function displayGoods ($pageName, $DBName, $params)
 	{
-		Model::goodLook($_SESSION['Quantity']);
+
 		if (!isset($_SESSION['Quantity'])) $_SESSION['Quantity'] = 20;
 
 		//$query = "SELECT * FROM ".$DBName." WHERE page = '".$pageName."'";LIMIT '.$shift.', '.$count.'
@@ -299,6 +299,7 @@ class Model
 		{
 			?>
 			<div class="dataDB">
+				<form action="/bucket" method="post">
 				<img src="<?php print_r($value['picture'])?>">
 				<p align="center">
 					<?php
@@ -308,13 +309,16 @@ class Model
 				<br>
 				<p>
 					Код товара: <?php print_r($value['id']); ?>
+					<input type='hidden' name='page' value='<?php echo $DBName; ?>'>
+					<input type='hidden' name='id' value='<?php print_r($value['id']); ?>'>
 				</p>
 				<p>
 					<?php print_r($value['price']); ?> <?php print_r($value['currency']); ?>
+
 				</p>
 				<br>
-				<form>
-					<input type="button" name="backet" value="Заказать">
+
+					<input type="submit" name="bucket" value="Заказать">
 				</form>
 			</div>
 			<?php
@@ -408,8 +412,7 @@ class Model
 			}
 
 		}
-		echo 'echo $Quantity:'.$Quantity.'<br>';
-		echo "echo $_SESSION[Quantity]:".$_SESSION['Quantity']."<br>!!!";
+
 		$pageFilter = $pageParam[0];
 		return array('pageFilter'=>$pageFilter);
 	}
