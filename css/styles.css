@@ -36,7 +36,7 @@ td, th {
 .active {
     color: #3bff38;
 }
-.page,.top-nav-menu {
+.page,.top-nav-menu, .phpContent {
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -139,11 +139,7 @@ nav a:hover {
     width: 350px;
 }
     /************************* PAGES ***********************/
-.phpContent{
-    margin: 10px 0px;
 
-
-}
 
 .dataDB {
     display: inline-block;
@@ -250,9 +246,15 @@ nav a:hover {
 /*************************   FOOTER ********************/
 
 footer {
-    position: relative;
+    /*position: absolute;*/
     background-color: #333333;
     min-height: 200px;
+    bottom: 0;
+    width: 100%;
+}
+.page1 {
+    margin: 0 auto;
+    max-width: 1200px;
 }
 footer ul {
     list-style-type: none;

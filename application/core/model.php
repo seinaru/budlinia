@@ -252,13 +252,13 @@ class Model
 	{
 		for ($i =0;$i < $num; $i++)
 		{
-			echo'<div class="img_category"><img src="img/'.$dir.'/'.$array1[$i].'.jpg" height="60px" width="60px"></div>';
+			echo'<div style="display:inline-block;"><div class="img_category"><img src="img/'.$dir.'/'.$array1[$i].'.jpg" height="60px" width="60px"></div>';
 			?><div class="list_category"><ul><?php
 				foreach ($array2[$i] as $key => $value)
 				{
 					echo '<li><a href="/'.$key.'">'.$value.'</a></li>';
 				}
-				?></ul></div><?php
+				?></ul></div></div><?php
 		}
 	}
 

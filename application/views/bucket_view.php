@@ -1,23 +1,25 @@
-<div align="center">
-    <table >
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>price</th>
-        </tr>
 <?php
 if (isset($_POST['clear']) && $_POST['clear'] == "Очистить") {
     $_SESSION['bucket'] = array ();
     $_POST['clear'] = '';
 }
-Model::goodLook($_POST);
+
 $array = array();
 if (isset($_POST['bucket'])) {
 
     array_push($array, $_POST['id'], $_POST['page']);
     array_push($_SESSION['bucket'], $array);
 }
-
+if (!empty($_SESSION['bucket']))
+{?>
+    <div align="center">
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+            </tr>
+<?php
 foreach ($_SESSION['bucket'] as $value)
 {
     $result = Model::sqlQuery("SELECT * FROM ".$value[1]." WHERE id = :id ", array('id' => $value[0]), false, 'fetchAll')[0];
@@ -53,3 +55,7 @@ foreach ($_SESSION['bucket'] as $value)
         </tr>
     </table>
 </form>
+
+<?php } else {
+    echo "<h1 align='center'>Ваша корзина пуста</h1>";
+}

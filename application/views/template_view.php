@@ -59,7 +59,7 @@
 	<a href="/todo">Полы</a>
 </nav>
 </div>
-<div class="phpContent">
+<div class="phpContent" style="max-width: 1200px">
 	<?php include 'application/views/'.$content_view; ?>
 
 </div>
@@ -68,7 +68,7 @@
 
 <footer>
 	<div class="page1">
-	<div class="information">
+	<div class="information" style="float: left">
 			<ul>
 				<li><a href="/">ИНФОРМАЦИЯ</a></li>
 				<li><a href="/">Скидки</a></li>
@@ -79,14 +79,14 @@
 
 			</ul>
 
-		</div>
-		<div class="my-profile">
+	</div>
+	<div class="my-profile">
 			<ul>
 				<li><a href="/">МОЯ УЧЕТНАЯ ЗАПИСЬ</a></li>
 				<li><a href="/bucket">Мои заказы</a></li>
 				<li><a href="/">Моя личная информация</a></li>
 			</ul>
-		</div>
+	</div>
 	<div class="contactUs">
 		<ul>
 			<li>
