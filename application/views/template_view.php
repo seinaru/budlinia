@@ -34,14 +34,14 @@
 		<div class="top-icon-menu">
 			<ul>
 				<li>
-					<a href="/bucket" alt="oops" ><img src="img/user-icon.jpg" ></a>
+					<a href="/todo" alt="oops" ><img src="img/user-icon.jpg" ></a>
 
 				</li>
 				<li>
 					<a href="/test" alt="oops"><img src="img/menu-icon.jpg"></a>
 				</li>
 				<li>
-					<a href="/todo" alt="oops"><img src="img/goods-icon.jpg"></a>
+					<a href="/bucket" alt="oops"><img src="img/goods-icon.jpg"></a>
 				</li>
 				<li>
 					<p>Phone: + 38 (888) 888-88-88</p>

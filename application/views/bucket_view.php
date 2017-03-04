@@ -8,12 +8,21 @@ $array = array();
 if (isset($_POST['bucket'])) {
 
     array_push($array, $_POST['id'], $_POST['page']);
-    array_push($_SESSION['bucket'], $array);
+    $test = 0;
+    echo 'test'.$test.'<br>';
+    foreach ($_SESSION['bucket'] as $value) if ($value[0] == $array[0]) $test++;
+    echo 'test'.$test.'<br>';
+    Model::goodLook($array);
+    if ($test == 0) {
+        array_push($_SESSION['bucket'], $array);
+        Model::goodLook($_SESSION['bucket']);
+    }
 }
 if (!empty($_SESSION['bucket']))
 {?>
     <div align="center">
         <table>
+            <caption>Корзина:</caption>
             <tr>
                 <th>id</th>
                 <th>name</th>
@@ -47,15 +56,17 @@ foreach ($_SESSION['bucket'] as $value)
 
     </table>
 </div>
-<form action="/bucket" method="post">
-    <table style="border: none">
-        <tr>
-            <td><input type="submit" name="clear" value="Очистить"></td>
-            <td><input type="submit" name="checkout" value="Оформить заказ"></td>
-        </tr>
-    </table>
-</form>
+<div align="center">
+    <form action="/bucket" method="post">
+        <table  style="border: none; ">
+            <tr>
+                <td><input type="submit" name="clear" value="Очистить"></td>
+                <td><input type="submit" name="checkout" value="Оформить заказ"></td>
+            </tr>
+        </table>
+    </form>
+</div>
 
 <?php } else {
-    echo "<h1 align='center'>Ваша корзина пуста</h1>";
+    echo "<h1 align='center' style='margin: 100px 0px;'>Ваша корзина пуста</h1>";
 }
